@@ -1,0 +1,6 @@
+{
+  "name": "Rahmatullo.com",
+  "description": "Портфолиои муосир ва касбии Rahmatullo.com - Таҳиягари веб ва Telegram Mini Apps аз Тоҷикистон.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

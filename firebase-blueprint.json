@@ -1,0 +1,121 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "Portfolio project entry",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "categoryId": { "type": "string" },
+        "techStack": { "type": "array" },
+        "description": { "type": "string" },
+        "longDescription": { "type": "string" },
+        "features": { "type": "array" },
+        "image": { "type": "string" },
+        "fallbackImage": { "type": "string" },
+        "liveUrl": { "type": "string" },
+        "githubUrl": { "type": "string" },
+        "isComingSoon": { "type": "boolean" }
+      },
+      "required": ["title", "description"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Service offered",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "benefits": { "type": "array" },
+        "icon": { "type": "string" },
+        "glowColor": { "type": "string" }
+      },
+      "required": ["title", "description"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Client testimonial",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "position": { "type": "string" },
+        "company": { "type": "string" },
+        "rating": { "type": "number" },
+        "feedback": { "type": "string" },
+        "gender": { "type": "string" }
+      },
+      "required": ["name", "feedback"]
+    },
+    "DeveloperStats": {
+      "title": "DeveloperStats",
+      "description": "Developer statistics",
+      "type": "object",
+      "properties": {
+        "projectsCount": { "type": "number" },
+        "experienceYears": { "type": "number" },
+        "clientsSatisfaction": { "type": "number" },
+        "miniAppsCreated": { "type": "number" }
+      }
+    },
+    "DeveloperProfile": {
+      "title": "DeveloperProfile",
+      "description": "Developer profile",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "introTitle": { "type": "string" },
+        "bio": { "type": "string" },
+        "quote": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "telegram": { "type": "string" },
+        "whatsapp": { "type": "string" },
+        "github": { "type": "string" },
+        "websiteName": { "type": "string" },
+        "logoUrl": { "type": "string" }
+      }
+    },
+    "ContactMessage": {
+      "title": "ContactMessage",
+      "description": "Message from contact form",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "contactHandle": { "type": "string" },
+        "serviceType": { "type": "string" },
+        "company": { "type": "string" },
+        "message": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["name", "contactHandle", "message", "status"]
+    }
+  },
+  "firestore": {
+    "projects/{projectId}": {
+      "schema": "Project",
+      "description": "A project in the portfolio"
+    },
+    "services/{serviceId}": {
+      "schema": "Service",
+      "description": "A service offered"
+    },
+    "testimonials/{testimonialId}": {
+      "schema": "Testimonial",
+      "description": "A client testimonial"
+    },
+    "global/stats": {
+      "schema": "DeveloperStats",
+      "description": "Global statistics"
+    },
+    "global/profile": {
+      "schema": "DeveloperProfile",
+      "description": "Global developer profile"
+    },
+    "messages/{messageId}": {
+      "schema": "ContactMessage",
+      "description": "Contact form messages"
+    }
+  }
+}
